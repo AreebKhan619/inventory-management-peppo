@@ -1,7 +1,7 @@
 import { Button, Select, Table, Tooltip, Space, Input, Modal } from 'antd';
-import { useContext, useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Highlighter from "react-highlight-words";
-import { AppContext } from '../../App';
+// import { AppContext } from '../../App';
 import { getInventoryData } from '../../mockApis/inventoryApis';
 import {
     SearchOutlined,
@@ -268,7 +268,9 @@ const ProductsTable = () => {
                 width={"80%"}
                 style={{ top: 20 }}
             >
-                <AddEditProductModal />
+                <AddEditProductModal
+                onCancel={()=>setShowCreateUpdateModal(false)}
+                selectedProduct={selectedProduct} />
             </Modal>
 
 

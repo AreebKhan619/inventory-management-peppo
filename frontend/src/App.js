@@ -1,10 +1,10 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import CustomLayout from './layout/layout';
 
 import productsData from "./data/products.json"
-import batchesData from "./data/batches.json"
+// import batchesData from "./data/batches.json"
 import categoriesData from "./data/categories.json"
-import companyData from "./data/company.json"
+// import companyData from "./data/company.json"
 import outletsData from "./data/outlets.json"
 import stockData from "./data/stock.json"
 import { createContext, useState } from 'react';

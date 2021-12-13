@@ -3,12 +3,8 @@ import {
     Form,
     Input,
     Button,
-    Radio,
     Select,
-    Cascader,
-    DatePicker,
     InputNumber,
-    TreeSelect,
     Switch,
     Row,
     Col,
@@ -16,15 +12,15 @@ import {
 import categoriesData from "../../data/categories.json"
 import { HighlightOutlined } from "@ant-design/icons"
 
-const AddEditProductModal = () => {
+const AddEditProductModal = ({ selectedProduct, onCancel }) => {
 
     // const [categoryId, setCategoryId] = useState("")
     const [category, setCategory] = useState(null)
     const [productName, setProductName] = useState("")
     const [displayName, setDisplayName] = useState("")
     const [description, setDescription] = useState("")
-    const [perUnitQty, setPerUnitQty] = useState("")
-    const [productUom, setProductUom] = useState(null)
+    const [unitQty, setUnitQty] = useState("")
+    const [unitUom, setUnitUom] = useState(null)
 
     const [isActive, setIsActive] = useState(true)
     const [barcodeNumber, setBarcodeNumber] = useState("")
@@ -36,39 +32,58 @@ const AddEditProductModal = () => {
         if (category?._id) setIsPerishable(category.isPerishable)
     }, [category])
 
+    useEffect(() => {
+        if (selectedProduct?._id) {
+            let { categoryId, productName, displayName, description, unitQty, unitUom, isActive, barcodeNumber, isPerishable, shelfLife } = selectedProduct
+
+            setCategory(categoriesData.find(el => el._id === categoryId))
+            setProductName(productName)
+            setDisplayName(displayName)
+            setDescription(description)
+            setUnitQty(unitQty)
+            setUnitUom(unitUom)
+            setIsPerishable(isPerishable)
+            setBarcodeNumber(barcodeNumber)
+            setShelfLife(shelfLife)
+            setIsActive(isActive)
+        }
+        //eslint-disable-next-line
+    }, [])
+
     return (
         <Form
             labelCol={{ span: 6 }}
             wrapperCol={{ span: 12 }}
             layout="horizontal"
-            onFinish={e => console.log(e)}
+            // onFinish={e => console.log(e)}
+            onFinish={onCancel}
         >
 
             <Row style={{ paddingLeft: 165 }}>
                 <Col span={12}>
-                    <Form.Item label="Product Category" name="size">
-                        <Select
-                            showSearch
-                            filterOption={(input, option) =>
-                                option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                            }
-                            style={{ width: 300 }}
-                            value={category?._id}
-                            onChange={(_id) => {
-                                const cat = categoriesData.find(el => el._id === _id)
-                                setCategory(cat)
-                                // console.log(cat)
-                            }}
-                        >
-                            {categoriesData.map(({ _id, categoryName }, index) => {
-                                return (
-                                    <Select.Option key={_id} value={_id}>
-                                        {categoryName}
-                                    </Select.Option>
-                                );
-                            })}
-                        </Select>
-                    </Form.Item>
+                    {/* <Form.Item label="Product Category" name="size"> */}
+                    <label style={{paddingLeft: 10}} for="category" class="" title="Product Category">Product Category: </label>
+                    <Select
+                        showSearch
+                        filterOption={(input, option) =>
+                            option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+                        }
+                        style={{ width: 300 }}
+                        value={category?._id}
+                        onChange={(_id) => {
+                            const cat = categoriesData.find(el => el._id === _id)
+                            setCategory(cat)
+                        }}
+                    >
+                        {categoriesData.map(({ _id, categoryName }, index) => {
+                            return (
+                                <Select.Option key={_id} value={_id}>
+                                    {categoryName}
+                                </Select.Option>
+                            );
+                        })}
+                    </Select>
+                    {/* </Form.Item> */}
 
 
                 </Col>
@@ -92,10 +107,10 @@ const AddEditProductModal = () => {
 
 
                         <Form.Item label="Per unit Qty">
-                            <InputNumber value={perUnitQty} onChange={val => setPerUnitQty(val)} /> <Select
+                            <InputNumber value={unitQty} onChange={val => setUnitQty(val)} /> <Select
                                 placeholder="Select a UoM"
-                                value={productUom}
-                                onChange={val => setProductUom(val)}
+                                value={unitUom}
+                                onChange={val => setUnitUom(val)}
                                 style={{ width: 100 }}
                             >
                                 {["g", "Kg", "l", "ml", "unit"].map(el => <Select.Option key={el} value={el}>{el}</Select.Option>)}
@@ -112,7 +127,7 @@ const AddEditProductModal = () => {
                                     <Form.Item name="suffix" noStyle>
                                         <HighlightOutlined
                                             onClick={() => {
-                                                setDisplayName(productName + (productUom ? " - (" + perUnitQty + productUom + ")" : ""))
+                                                setDisplayName(productName + (unitUom ? " - (" + unitQty + unitUom + ")" : ""))
                                             }}
                                             style={{ width: 200, cursor: "pointer" }} />
                                     </Form.Item>
@@ -167,7 +182,8 @@ const AddEditProductModal = () => {
             <Form.Item wrapperCol={{
                 offset: 6
             }}>
-                <Button disabled={!category?._id} type="primary" htmlType="submit" style={{ minWidth: 200 }}>
+                <Button
+                    disabled={!category?._id} type="primary" htmlType="submit" style={{ minWidth: 200 }}>
                     Submit
                 </Button>
             </Form.Item>

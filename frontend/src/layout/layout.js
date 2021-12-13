@@ -2,9 +2,9 @@ import { Layout } from "antd";
 import { Route, Routes } from "react-router-dom";
 import LandingMain from "../pages";
 import BatchesMain from "../pages/batches";
-import InventoryMain from "../pages/inventory";
+// import InventoryMain from "../pages/inventory";
 import ProductsMain from "../pages/products";
-import StockMain from "../pages/stock";
+// import StockMain from "../pages/stock";
 import Navbar from "./navbar";
 
 const { Header, Content, Footer } = Layout;
