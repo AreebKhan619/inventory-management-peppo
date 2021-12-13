@@ -1,0 +1,58 @@
+[
+    {
+        "_id": "fddd658c-81af-40b2-96c0-547f23ae3662",
+        "companyId": "805ac589-62dd-4ed4-a4e8-80611fbb0133",
+        "outletName": "Outlet A",
+        "address": {
+            "line1": "72 Montana Place",
+            "line2": "Colombo",
+            "coordinates": [
+                79.8441645,
+                6.9333793
+            ],
+            "pincode": 61518
+        }
+    },
+    {
+        "_id": "a5cbc09d-0790-4cf5-bcb6-f9e55e0f85af",
+        "companyId": "805ac589-62dd-4ed4-a4e8-80611fbb0133",
+        "outletName": "Outlet B",
+        "address": {
+            "line1": "1190 Schiller Point",
+            "line2": "Chenzhuang",
+            "coordinates": [
+                114.112961,
+                38.570152
+            ],
+            "pincode": 83832
+        }
+    },
+    {
+        "_id": "ed158ab6-69da-4a44-b3bd-b2ef4997e5d4",
+        "companyId": "805ac589-62dd-4ed4-a4e8-80611fbb0133",
+        "outletName": "Aakashvani Store",
+        "address": {
+            "line1": "598 Crowley Place",
+            "line2": "Tuplice",
+            "coordinates": [
+                14.874997,
+                51.6818091
+            ],
+            "pincode": 94415
+        }
+    },
+    {
+        "_id": "6b0a71e3-9ccd-45cc-a2f4-87104c7ee889",
+        "companyId": "805ac589-62dd-4ed4-a4e8-80611fbb0133",
+        "outletName": "Lamington Road Store",
+        "address": {
+            "line1": "75 Grover Pass",
+            "line2": "Novoye Leushino",
+            "coordinates": [
+                40.51,
+                56.81
+            ],
+            "pincode": 17053
+        }
+    }
+]

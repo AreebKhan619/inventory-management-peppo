@@ -1,10 +1,44 @@
+// company
+/**
+ * 
+ {
+    _id: Mongoose.Schema.Types.ObjectId,
+    companyName: String,
+}
+ */
+
+
+// outlets
+
+/**
+ * 
+    {
+        _id: Mongoose.Schema.Types.ObjectId,
+        companyId:  Mongoose.Schema.Types.ObjectId, //(from company._id)
+        outletName: String,
+        address: {
+            line1: String,
+            line2: String,
+            pincode: Number,
+            coordinates,
+        },
+        pointsOfContact: [
+            {
+                type: String,
+                name: String,
+                contactNo: Number
+            }
+        ]
+    }
+ */
+
 // categories
 
 /**
  * {
-        categoryId: Mongoose.Schema.Types.ObjectId,
+        _id: Mongoose.Schema.Types.ObjectId,
         categoryName: String,
-        categoryDescription: String,
+        description: String,
         isPerishable: Boolean,
     }
  */
@@ -17,22 +51,19 @@
 // product
 /**
  * {
-        productId: Mongoose.Schema.Types.ObjectId,
+        _id: Mongoose.Schema.Types.ObjectId,
         productName: String,
         displayName: String,
-        productDescription: String,  // ('Small Blue', 'Medium Red', etc. sizes for apparel)
-        productWeight: Number,
-        productUom: String,
-        
-        productQuantity: Number,
-        lowStockQuantity: Number,
+        description: String,  // ('Small Blue', 'Medium Red', etc. sizes for apparel)
+        unitQty: Number,
+        unitUom: String,
 
         isActive: Boolean,
         barcodeNumber: Number,
         pricing: {
             mrp: Number,
-            discountPercent: Number,
-            discount: Number,
+            discountAmt: Number,
+            sellingPrice: Number
         },
         categoryId: Mongoose.ObjectId (referring to Schema.categories.categoryId),
         isPerishable: Boolean, (gotten from categoryId.isPerishable)
@@ -45,12 +76,14 @@
     /**
      * 
         {
-            stockId: Mongoose.Schema.Types.ObjectId,
+            _id: Mongoose.Schema.Types.ObjectId,
+            outletId: Mongoose.Schema.Types.ObjectId,
             productId: Mongoose.Schema.Types.ObjectId,
-            productQuantity: Number,
+            inStockQty: Number,
             productUom: String, //can be obtained from productId
-            lowStockQuantity: Number,
-            dateLastUpdated: Date
+            lowStockQty: Number,
+            lastUpdated: Date,
+            storeId: Mongoose.Schema.Types.ObjectId
         }
      */
 
@@ -60,11 +93,17 @@
     /**
      * 
      {
-         batchId: Mongoose.Schema.Types.ObjectId,
+         _id: Mongoose.Schema.Types.ObjectId,
+         outletId: Mongoose.Schema.Types.ObjectId,
          productId: Mongoose.Schema.Types.ObjectId, // (referring to Schema product.productId)
-         categoryId: Mongoose.Schema.Types.ObjectID, // referring to Schema category.categoryId
+        
+        
+        //  categoryId: Mongoose.Schema.Types.ObjectID, // referring to Schema category.categoryId (not needed)
+
+
+        mfgDate: Date, // useful in case the product selected is perishable in nature
          inwardDate: Date,
-         batchQuantity: Number,
+         batchQty: Number,
          batchUom: String // once product Id is provided, the batchUom can be assigned
      }
      */

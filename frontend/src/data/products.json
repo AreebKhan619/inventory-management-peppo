@@ -1,0 +1,128 @@
+[
+    {
+        "_id": "18d79638-67dd-493f-b4e7-6fde2d52b8bc",
+        "productName": "Amul Butter Milk",
+        "displayName": "Amul Butter Milk - 1ltr",
+        "description": null,
+        "unitQty": 1,
+        "unitUom": "l",
+        "isActive": true,
+        "barcodeNumber": 10000000000000,
+        "pricing": {
+            "mrp": 100,
+            "discountAmt": 20,
+            "sellingPrice": 80
+        },
+        "categoryId": "18d79638-67dd-493f-b4e7-6fde2d52b5ac",
+        "isPerishable": true,
+        "shelfLife": 60
+    },
+    {
+        "_id": "4e5460ab-2e8b-49ca-99df-2c2f6708ac5d",
+        "productName": "Organic Bananas",
+        "displayName": "Organic Bananas by Sai Foods - 3kg",
+        "description": "Organic Bananas - Fresh & Properly Ripened",
+        "unitQty": 3,
+        "unitUom": "kg",
+        "isActive": true,
+        "barcodeNumber": 2130910823132,
+        "pricing": {
+            "mrp": 150,
+            "discountAmt": 30,
+            "sellingPrice": 100
+        },
+        "categoryId": "18d79638-67dd-493f-b4e7-6fde2d52b5ac",
+        "isPerishable": true,
+        "shelfLife": 7
+    },
+    {
+        "_id": "432b94e0-0b4b-4826-a90e-8b0e93fbc5ef",
+        "productName": "Fur Coat",
+        "displayName": "Fur Coat",
+        "description": "Fur Coat obtained by mercilessly killing minks",
+        "unitQty": 1,
+        "unitUom": "unit",
+        "isActive": true,
+        "barcodeNumber": 9999999999999,
+        "pricing": {
+            "mrp": 700,
+            "discountAmt": 80,
+            "sellingPrice": 620
+        },
+        "categoryId": "b0f6ea1b-278b-463b-8dc5-2bedf9e89f7e",
+        "isPerishable": false,
+        "shelfLife": null
+    },
+    {
+        "_id": "7a7ba451-b7e5-4cf4-87cc-04c23688eab1",
+        "productName": "Sinarest Cough Syrup",
+        "displayName": "Sinarest Cough Syrup - 100ml",
+        "description": null,
+        "unitQty": 100,
+        "unitUom": "ml",
+        "isActive": true,
+        "barcodeNumber": 9999999999999,
+        "pricing": {
+            "mrp": 120,
+            "discountAmt": 20,
+            "sellingPrice": 100
+        },
+        "categoryId": "b44e01e7-76f8-46fa-bb5d-12b22a56a192",
+        "isPerishable": true,
+        "shelfLife": 30
+    },
+    {
+        "_id": "d40a7ef8-87fc-4075-8947-e11a71574bcb",
+        "productName": "Kangaroo Stapler",
+        "displayName": "Kangaroo Stapler",
+        "description": null,
+        "unitQty": 1,
+        "unitUom": "unit",
+        "isActive": true,
+        "barcodeNumber": 10000000000000,
+        "pricing": {
+            "mrp": 80,
+            "discountAmt": 10,
+            "sellingPrice": 70
+        },
+        "categoryId": "b44e01e7-76f8-46fa-bb5d-12b22a56a194",
+        "isPerishable": false,
+        "shelfLife": null
+    },
+    {
+        "_id": "dc60f8c5-ce2f-46fa-b399-c76a18afb99c",
+        "productName": "Redmi Note 7A",
+        "displayName": "Redmi Note 7A",
+        "description": "32GB Storage, 2GB RAM, Dark Black",
+        "unitQty": 1,
+        "unitUom": "unit",
+        "isActive": true,
+        "barcodeNumber": 10000000000000,
+        "pricing": {
+            "mrp": 7600,
+            "discountAmt": 32,
+            "sellingPrice": 7000
+        },
+        "categoryId": "b44e01e7-76f8-46fa-bb5d-12b22a52a194",
+        "isPerishable": false,
+        "shelfLife": null
+    },
+    {
+        "_id": "d107f92d-e454-47c5-b8a5-111df6889ab3",
+        "productName": "Spider-Man 3 DVD Movie",
+        "displayName": "Spider-Man 3 (2007) DVD Movie",
+        "description": "Starring Tobey Maguire, Kirsten Dunst; Dir - Sam Raimi",
+        "unitQty": 1,
+        "unitUom": "unit",
+        "isActive": true,
+        "barcodeNumber": 30000,
+        "pricing": {
+            "mrp": 300,
+            "discountAmt": 50,
+            "sellingPrice": 250
+        },
+        "categoryId": "175b38a8-5910-4b16-9120-c583abc6bdcd",
+        "isPerishable": false,
+        "shelfLife": null
+    }
+]

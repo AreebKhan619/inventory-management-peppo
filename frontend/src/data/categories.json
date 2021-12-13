@@ -1,0 +1,38 @@
+[
+    {
+        "_id": "18d79638-67dd-493f-b4e7-6fde2d52b5ac",
+        "categoryName": "Groceries",
+        "description": "Fruits, Vegetables and other eatables",
+        "isPerishable": true
+    },
+    {
+        "_id": "b0f6ea1b-278b-463b-8dc5-2bedf9e89f7e",
+        "categoryName": "Apparel",
+        "description": "Clothing and Accessories",
+        "isPerishable": false
+    },
+    {
+        "_id": "b44e01e7-76f8-46fa-bb5d-12b22a56a192",
+        "categoryName": "Medicines",
+        "description": "Cosmetics & Medicines",
+        "isPerishable": false
+    },
+    {
+        "_id": "b44e01e7-76f8-46fa-bb5d-12b22a56a194",
+        "categoryName": "Home, Office Supplies & Equipments",
+        "description": "Toiletries, Stationaries, Sports, Work and Construction Utilities and equipments",
+        "isPerishable": false
+    },
+    {
+        "_id": "b44e01e7-76f8-46fa-bb5d-12b22a52a194",
+        "categoryName": "Electronics",
+        "description": "Electronic Items",
+        "isPerishable": false
+    },
+    {
+        "_id": "175b38a8-5910-4b16-9120-c583abc6bdcd",
+        "categoryName": "Miscellaneous",
+        "description": "Miscellaneous products not covered by other categories",
+        "isPerishable": false
+    }
+]
