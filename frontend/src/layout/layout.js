@@ -29,7 +29,7 @@ const CustomLayout = ({ children, isLoggedIn, isDarkTheme }) => {
                 >
                     <Content style={{ padding: "10px", minHeight: 280 }}>
                         <Routes>
-                            <Route index element={<ProductsMain />} />
+                            <Route index element={<LandingMain />} />
                             <Route path="products" element={<ProductsMain />} />
                             <Route path="batches" element={<BatchesMain />} />
                         </Routes>
@@ -37,7 +37,7 @@ const CustomLayout = ({ children, isLoggedIn, isDarkTheme }) => {
                 </Layout>
             </Content>
             <Footer style={{ textAlign: "center" }}>
-                AgroTrust Invento ©2021 Created by Emertech Innovations
+                Inventory Management ©{new Date().getFullYear()}
             </Footer>
         </Layout>
     );

@@ -1,102 +1,24 @@
 [
     {
         "_id": "57b4ad83-32db-4571-8d73-c06562735c00",
-        "outletId": "11871570-b9da-47b4-b996-028dd71b0ffb",
-        "productId": "e0e3ea02-6867-4da7-9459-9d6863a974a0",
+        "outletId": "fddd658c-81af-40b2-96c0-547f23ae3662",
+        "productId": "18d79638-67dd-493f-b4e7-6fde2d52b8bc",
         "batchQty": 4930,
         "batchUom": "l",
         "inwardDate": "2021-10-23T10:47:13Z",
         "mfgDate": "2021-03-07T15:12:06Z",
-        "expDate": "2021-09-28T11:00:24Z"
+        "expDate": "2021-09-28T11:00:24Z",
+        "isConsumed": false
     },
     {
         "_id": "4fb1700b-d472-4e15-8584-aba111f7531b",
-        "outletId": "a9e317e3-09c1-4461-b070-e272eefe909a",
-        "productId": "844db374-d2ba-42a9-8ecb-fe603f35fc9c",
-        "batchQty": 9983,
-        "batchUom": "g",
+        "outletId": "fddd658c-81af-40b2-96c0-547f23ae3662",
+        "productId": "4e5460ab-2e8b-49ca-99df-2c2f6708ac5d",
+        "batchQty": 984,
+        "batchUom": "Kg",
         "inwardDate": "2021-01-03T06:18:19Z",
-        "mfgDate": "2021-06-15T18:50:09Z",
-        "expDate": "2021-10-14T11:11:06Z"
-    },
-    {
-        "_id": "79d475ef-4f43-47c0-ab50-02976f497236",
-        "outletId": "6d3e5e3f-f2d8-4d0e-97dd-fa08b5dccc23",
-        "productId": "7f9ac006-7afb-4890-8ffe-7c2c8f0a8982",
-        "batchQty": 8696,
-        "batchUom": "Kg",
-        "inwardDate": "2021-03-14T14:55:52Z",
-        "mfgDate": "2021-11-29T01:40:11Z",
-        "expDate": "2021-11-27T16:02:12Z"
-    },
-    {
-        "_id": "65e30bde-0981-4bb7-8de3-fb77f6632ab0",
-        "outletId": "751a52c4-99c4-4514-9f34-998c4ed26730",
-        "productId": "ac64d52d-8968-495b-86fe-c57d5513bebb",
-        "batchQty": 3272,
-        "batchUom": "unit",
-        "inwardDate": "2021-07-25T22:48:38Z",
-        "mfgDate": "2021-07-27T02:24:36Z",
-        "expDate": "2021-03-16T22:52:55Z"
-    },
-    {
-        "_id": "526f8feb-a541-4909-aa16-d71b8bdb22c6",
-        "outletId": "97aa63eb-2e9b-44d5-bbd6-2491736907aa",
-        "productId": "90805288-56c4-4ac5-9b40-987b1a7e503b",
-        "batchQty": 4422,
-        "batchUom": "Kg",
-        "inwardDate": "2021-11-09T21:10:40Z",
-        "mfgDate": "2021-08-09T09:43:33Z",
-        "expDate": "2021-12-02T12:07:03Z"
-    },
-    {
-        "_id": "278ba9bb-7c84-43c2-b221-ed5b6bf9037a",
-        "outletId": "95234c31-79d3-47bb-9e1e-e8f8a9345eca",
-        "productId": "8dd10115-f412-428a-806b-0ff60234e842",
-        "batchQty": 9914,
-        "batchUom": "Kg",
-        "inwardDate": "2021-05-06T20:58:43Z",
-        "mfgDate": "2021-12-10T14:25:17Z",
-        "expDate": "2021-09-08T03:47:37Z"
-    },
-    {
-        "_id": "64d99fad-d8b4-496a-a985-ff56ae50400a",
-        "outletId": "f33b89ab-de8d-4677-b0d0-fc4f81217aa4",
-        "productId": "8849bbe2-361a-446c-8ebf-dba666bc8656",
-        "batchQty": 7089,
-        "batchUom": "Kg",
-        "inwardDate": "2021-10-27T09:56:55Z",
-        "mfgDate": "2021-09-10T12:28:34Z",
-        "expDate": "2021-05-19T22:37:33Z"
-    },
-    {
-        "_id": "3674971f-ed56-45f4-8481-411baea27a78",
-        "outletId": "7d3b0c8a-0803-44a3-b2c8-504e989afa66",
-        "productId": "44d0c671-837f-42de-9943-44a3f3a989e5",
-        "batchQty": 3937,
-        "batchUom": "ml",
-        "inwardDate": "2021-04-10T22:42:04Z",
-        "mfgDate": "2021-11-17T21:23:15Z",
-        "expDate": "2021-11-19T18:48:45Z"
-    },
-    {
-        "_id": "b1611d59-8a4c-4070-b278-db1036ceb138",
-        "outletId": "f6f81c14-fc2d-4464-835b-8867487268a4",
-        "productId": "2b2ba724-8194-4440-8639-8451bcb41fe3",
-        "batchQty": 5030,
-        "batchUom": "ml",
-        "inwardDate": "2021-07-03T09:52:56Z",
-        "mfgDate": "2021-08-19T06:45:25Z",
-        "expDate": "2021-06-22T18:15:30Z"
-    },
-    {
-        "_id": "c6f46571-2faf-487d-ab46-db7c1b2f3e46",
-        "outletId": "582cba9d-a3ac-4c91-9c02-280b7d5791fa",
-        "productId": "f9084f8c-c186-47c2-9fa2-c49cb636d5e4",
-        "batchQty": 1016,
-        "batchUom": "ml",
-        "inwardDate": "2021-07-28T02:40:44Z",
-        "mfgDate": "2021-08-19T19:40:38Z",
-        "expDate": "2021-03-17T17:05:08Z"
+        "mfgDate": "2021-03-07T15:12:06Z",
+        "expDate": "2021-10-14T11:11:06Z",
+        "isConsumed": true
     }
 ]

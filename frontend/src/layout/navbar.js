@@ -43,7 +43,9 @@ const Navbar = ({
 
 
       <Menu.Item>
-        <b style={{color: "darkgreen", fontSize: 20}}>peppo</b>
+        <Link to={'/'}>
+          <b style={{ color: "darkgreen", fontSize: 20 }}>peppo</b>
+        </Link>
       </Menu.Item>
       {_routing.map(({ link, name }, i) => (
         <Menu.Item key={link}>

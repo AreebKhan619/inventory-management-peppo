@@ -115,7 +115,7 @@
         "unitQty": 1,
         "unitUom": "unit",
         "isActive": true,
-        "barcodeNumber": 30000,
+        "barcodeNumber": 1234565432100,
         "pricing": {
             "mrp": 300,
             "discountAmt": 50,

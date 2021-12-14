@@ -96,15 +96,14 @@
          _id: Mongoose.Schema.Types.ObjectId,
          outletId: Mongoose.Schema.Types.ObjectId,
          productId: Mongoose.Schema.Types.ObjectId, // (referring to Schema product.productId)
-        
-        
-        //  categoryId: Mongoose.Schema.Types.ObjectID, // referring to Schema category.categoryId (not needed)
 
-
-        mfgDate: Date, // useful in case the product selected is perishable in nature
          inwardDate: Date,
+        mfgDate: Date, // useful in case the product selected is perishable in nature
+        expDate: Date,
+
          batchQty: Number,
-         batchUom: String // once product Id is provided, the batchUom can be assigned
+         batchUom: String // once product Id is provided, the batchUom can be assigned, and can be a superlative of the product's UoM
+         isConsumed: Boolean
      }
      */
 

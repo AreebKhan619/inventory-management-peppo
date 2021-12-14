@@ -130,7 +130,7 @@ const ProductsTable = () => {
             dataIndex: 'productName',
             ...getColumnSearchProps("productName"),
             render: (value, row) => <div>
-                <div>{value}</div>
+                <div style={{fontWeight: "bold", color: "darkgreen"}}>{value}</div>
                 <div style={{ color: "grey" }}>({row.displayName})</div>
             </div>,
 

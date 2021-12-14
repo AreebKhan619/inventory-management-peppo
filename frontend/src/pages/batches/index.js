@@ -2,7 +2,7 @@ import { Button, Select, Table, Tooltip, Space, Input, Modal } from 'antd';
 import { useEffect, useState, useRef } from 'react';
 import Highlighter from "react-highlight-words";
 // import { AppContext } from '../../App';
-import { getInventoryData } from '../../mockApis/inventoryApis';
+import { getBatchData, getInventoryData } from '../../mockApis/inventoryApis';
 import {
     SearchOutlined,
     ExclamationCircleFilled,
@@ -13,7 +13,7 @@ import outletsData from "../../data/outlets.json"
 import { getCatList } from '../../functions/utils';
 import AddEditProductModal from '../products/addEditProductModal';
 import AddBatch from './addBatch';
-
+import moment from "moment"
 
 
 const BatchesMain = () => {
@@ -126,88 +126,63 @@ const BatchesMain = () => {
 
     const columns = [
         {
-            title: 'Name',
+            title: 'Product',
             key: 'productName',
             dataIndex: 'productName',
             ...getColumnSearchProps("productName"),
             render: (value, row) => <div>
-                <div>{value}</div>
+                <div style={{ fontWeight: "bold", color: "darkgreen" }}>{value}</div>
                 <div style={{ color: "grey" }}>({row.displayName})</div>
             </div>,
-
         },
+        // {
+        //     title: "Category",
+        //     dataIndex: "category",
+        //     width: 100,
+        //     filters: getCatList(),
+        //     filterMultiple: true,
+        //     onFilter: (value, record) => record.category.indexOf(value) === 0,
+        // },
         {
-            title: "Category",
-            dataIndex: "category",
-            width: 100,
-            filters: getCatList(),
-            filterMultiple: true,
-            onFilter: (value, record) => record.category.indexOf(value) === 0,
-        },
-        {
-            title: 'SKUs in stock',
-            dataIndex: "inStockQty",
+            title: 'Batch Qty Inwarded',
+            dataIndex: "batchQty",
             render: (value, row) => {
+                return <span>{value} {row.batchUom}</span>
+            },
+            filter: "Show non-empty records",
+            onFilter: (value, record) => record.inStockQty > 0,
+            sorter: (x, y) => x.batchQty - y.batchQty
+        },
+        {
+            title: 'Date of Inward',
+            dataIndex: "inwardDate",
+            render: (value) => moment(value).format("DD/MM/YYYY"),
+        },
+        {
+            title: 'SKUS in batch',
+            render: (value, row) => {
+                // return <span>{value} {row.batchUom}</span>
                 return (
-                    <div style={{ display: "flex", alignItems: "center" }}>{row.inStockQty / row.unitQty}
-                        {((row.inStockQty || 0) < row.lowStockQty) && <Tooltip title={"Low Stock Alert!"}>
-                            <ExclamationCircleFilled style={{ color: "darkyellow", fontSize: 25, marginLeft: 10 }} />
-                        </Tooltip>}
+                    <div style={{ display: "flex", alignItems: "center" }}>{row.batchQty / row.unitQty}
                     </div>
                 )
             },
             filter: "Show non-empty records",
             onFilter: (value, record) => record.inStockQty > 0,
-            sorter: (x, y) =>
-                (x.inStockQty / x.unitQty) - (y.inStockQty / y.unitQty)
+            sorter: (x, y) => x.batchQty - y.batchQty
         },
         {
-            title: 'Per item Qty',
-            key: 'unitQty',
-            dataIndex: 'unitQty',
-            render: (value, row) => {
-                return (
-                    <div>{value} {row.unitUom}</div>
-                )
-            }
-        },
-        {
-            title: 'Volume In Stock',
-            dataIndex: "inStockQty",
-            render: (value, row) => <>{value} {row.unitUom}</>,
-            sorter: (x, y) => x.tax - y.tax,
+            title: "Status",
+            dataIndex: "isConsumed",
+            render: value => <Button onClick={()=>{
+                if(value) return;
+                window.confirm("Mark batch as consumed?")
+            }} type={value ? "text" : "link"}>
+                {value ? "Consumed" : "Not consumed yet"}
+            </Button>
 
-        },
-        {
-            title: 'MRP',
-            render: object => <span>Rs. {object.pricing.mrp}</span>
-        },
-        {
-            title: 'Selling Price',
-            render: object => <span style={{ fontSize: "1.1em", fontWeight: "bold" }}>Rs. {object.pricing.sellingPrice}</span>
-        },
-        {
-            title: 'Barcode',
-            dataIndex: "barcodeNumber",
-            ...getColumnSearchProps("barcodeNumber")
-        },
-        {
-            title: 'Actions',
-            render: (value, row) => <Tooltip title="Edit">
-                <Button
-                    type="primary"
-                    shape="circle"
-                    icon={<EditOutlined />}
-                    // onClick={() => {
-                    //     setSelectedProduct(row)
-                    //     setShowCreateUpdateModal(true)
-                    // }}
-                    danger
-                />
-            </Tooltip>
-        },
+        }
     ];
-
 
 
 
@@ -217,12 +192,8 @@ const BatchesMain = () => {
     }, [outletId])
 
 
-    // useEffect(() => {
-    //     console.log(tableData)
-    // }, [tableData])
-
     const setterFn = async () => {
-        setTableData(await getInventoryData(outletId))
+        setTableData(await getBatchData(outletId))
     }
 
     return (
@@ -257,6 +228,8 @@ const BatchesMain = () => {
                     <PlusOutlined /> Record a Batch for {outletsData.find(el => el._id === outletId).outletName}
                 </Button>
             </div>
+
+
             <Table columns={columns} dataSource={tableData} />
 
 
