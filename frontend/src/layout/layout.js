@@ -29,7 +29,7 @@ const CustomLayout = ({ children, isLoggedIn, isDarkTheme }) => {
                 >
                     <Content style={{ padding: "10px", minHeight: 280 }}>
                         <Routes>
-                            <Route index element={<LandingMain />} />
+                            <Route index element={<ProductsMain />} />
                             <Route path="products" element={<ProductsMain />} />
                             <Route path="batches" element={<BatchesMain />} />
                         </Routes>

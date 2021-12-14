@@ -21,10 +21,10 @@ const Navbar = ({
 }) => {
 
   const _routing = [
-    {
-      link: "/",
-      name: "Home",
-    },
+    // {
+    //   link: "/",
+    //   name: "Home",
+    // },
     {
       link: "/products",
       name: "Products",
@@ -40,6 +40,11 @@ const Navbar = ({
     <Menu mode="horizontal"
     // selectedKeys={location.pathname}
     >
+
+
+      <Menu.Item>
+        <b style={{color: "darkgreen", fontSize: 20}}>peppo</b>
+      </Menu.Item>
       {_routing.map(({ link, name }, i) => (
         <Menu.Item key={link}>
           <Link to={link}>

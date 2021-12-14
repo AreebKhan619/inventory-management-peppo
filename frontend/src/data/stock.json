@@ -40,7 +40,7 @@
         "outletId": "a5cbc09d-0790-4cf5-bcb6-f9e55e0f85af",
         "productId": "5b6e5fd1-433f-4430-9aaa-fdfdeed5277c",
         "inStockQty": 8998,
-        "productUom": "kg",
+        "productUom": "Kg",
         "lowStockQty": 62,
         "lastUpdated": "2021-09-06T00:16:14Z"
     },
@@ -49,7 +49,7 @@
         "outletId": "fddd658c-81af-40b2-96c0-547f23ae3662",
         "productId": "6d14a0d0-6f07-4921-92b5-657e76a16437",
         "inStockQty": 2660,
-        "productUom": "kg",
+        "productUom": "Kg",
         "lowStockQty": 75,
         "lastUpdated": "2021-05-23T04:18:05Z"
     },
@@ -67,7 +67,7 @@
         "outletId": "fddd658c-81af-40b2-96c0-547f23ae3662",
         "productId": "0c148719-aefb-4d83-8577-433d5923cc0a",
         "inStockQty": 2144,
-        "productUom": "kg",
+        "productUom": "Kg",
         "lowStockQty": 76,
         "lastUpdated": "2021-01-18T08:53:48Z"
     },
@@ -94,7 +94,7 @@
         "outletId": "a5cbc09d-0790-4cf5-bcb6-f9e55e0f85af",
         "productId": "c8dff0d4-437d-4bf4-af39-b595301c8e79",
         "inStockQty": 2385,
-        "productUom": "kg",
+        "productUom": "Kg",
         "lowStockQty": 75,
         "lastUpdated": "2021-08-27T06:47:09Z"
     },
@@ -175,7 +175,7 @@
         "outletId": "ed158ab6-69da-4a44-b3bd-b2ef4997e5d4",
         "productId": "8a7dec5f-096c-4259-a377-15698baf4246",
         "inStockQty": 8631,
-        "productUom": "kg",
+        "productUom": "Kg",
         "lowStockQty": 31,
         "lastUpdated": "2021-06-29T18:30:13Z"
     }

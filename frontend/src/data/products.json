@@ -23,7 +23,7 @@
         "displayName": "Organic Bananas by Sai Foods - 3kg",
         "description": "Organic Bananas - Fresh & Properly Ripened",
         "unitQty": 3,
-        "unitUom": "kg",
+        "unitUom": "Kg",
         "isActive": true,
         "barcodeNumber": 2130910823132,
         "pricing": {
